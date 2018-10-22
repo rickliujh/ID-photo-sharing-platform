@@ -1,0 +1,1 @@
+geth  --identity "newEth" --rpc --rpcaddr "0.0.0.0" --rpccorsdomain "*" --datadir data0  --port 30303 --rpcapi "personal,db,eth,net,web3" --networkid 888  --rpcport 8546 console

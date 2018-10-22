@@ -1,0 +1,17 @@
+{
+    "config":{
+        "chainld":15,
+        "homesteadBlock":0,
+        "eip155Block":0,
+        "eip158Block":0
+    },
+    "coinbase":"0x0000000000000000000000000000000000000000",
+    "difficulty":"50",
+    "extraData":"",
+    "gasLimit":"0xfffffffffffffffffff",
+    "nonce":"0x0000000000000042",
+    "maxhash":"0x0000000000000000000000000000000000000000000000000000000000000000",
+    "parentHash":"0x0000000000000000000000000000000000000000000000000000000000000000",
+    "tamestamp":"0x00",
+    "alloc":{}
+}

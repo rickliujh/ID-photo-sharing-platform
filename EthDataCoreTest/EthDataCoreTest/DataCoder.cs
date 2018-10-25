@@ -10,7 +10,9 @@ namespace DataProcess
 {
     static class DataCoder
     {
-
+        ///您需要安装libc6-dev以使System.Drawing.Common在Linux上的.NET Core中正常运行。
+        ///RUN apt-get install -y libc6-dev
+        ///RUN apt-get install -y libgdiplus
         public static string ImgToBase64String(string Imagefilename)
         {
             try
@@ -27,6 +29,7 @@ namespace DataProcess
             }
             catch (Exception ex)
             {
+                throw;
                 return null;
             }
         }

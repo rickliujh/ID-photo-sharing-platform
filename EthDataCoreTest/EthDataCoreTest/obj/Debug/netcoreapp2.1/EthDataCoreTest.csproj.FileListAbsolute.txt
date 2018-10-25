@@ -1,11 +1,33 @@
-D:\Code\EthDataCoreTest\EthDataCoreTest\bin\Debug\netcoreapp2.1\EthDataCoreTest.deps.json
-D:\Code\EthDataCoreTest\EthDataCoreTest\bin\Debug\netcoreapp2.1\EthDataCoreTest.runtimeconfig.json
-D:\Code\EthDataCoreTest\EthDataCoreTest\bin\Debug\netcoreapp2.1\EthDataCoreTest.runtimeconfig.dev.json
-D:\Code\EthDataCoreTest\EthDataCoreTest\bin\Debug\netcoreapp2.1\EthDataCoreTest.dll
-D:\Code\EthDataCoreTest\EthDataCoreTest\obj\Debug\netcoreapp2.1\EthDataCoreTest.csprojAssemblyReference.cache
-D:\Code\EthDataCoreTest\EthDataCoreTest\obj\Debug\netcoreapp2.1\EthDataCoreTest.csproj.CoreCompileInputs.cache
-D:\Code\EthDataCoreTest\EthDataCoreTest\obj\Debug\netcoreapp2.1\EthDataCoreTest.AssemblyInfoInputs.cache
-D:\Code\EthDataCoreTest\EthDataCoreTest\obj\Debug\netcoreapp2.1\EthDataCoreTest.AssemblyInfo.cs
-D:\Code\EthDataCoreTest\EthDataCoreTest\bin\Debug\netcoreapp2.1\EthDataCoreTest.pdb
-D:\Code\EthDataCoreTest\EthDataCoreTest\obj\Debug\netcoreapp2.1\EthDataCoreTest.dll
-D:\Code\EthDataCoreTest\EthDataCoreTest\obj\Debug\netcoreapp2.1\EthDataCoreTest.pdb
+D:/Code/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.deps.json
+D:/Code/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.runtimeconfig.json
+D:/Code/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.runtimeconfig.dev.json
+D:/Code/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.dll
+D:/Code/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.csprojAssemblyReference.cache
+D:/Code/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.csproj.CoreCompileInputs.cache
+D:/Code/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.AssemblyInfoInputs.cache
+D:/Code/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.AssemblyInfo.cs
+D:/Code/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.pdb
+D:/Code/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.dll
+D:/Code/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.pdb
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.deps.json
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.runtimeconfig.json
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.runtimeconfig.dev.json
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.dll
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.pdb
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.csprojAssemblyReference.cache
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.csproj.CoreCompileInputs.cache
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.AssemblyInfoInputs.cache
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.AssemblyInfo.cs
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.dll
+D:/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.pdb
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.deps.json
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.runtimeconfig.json
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.runtimeconfig.dev.json
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.dll
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/bin/Debug/netcoreapp2.1/EthDataCoreTest.pdb
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.csprojAssemblyReference.cache
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.csproj.CoreCompileInputs.cache
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.AssemblyInfoInputs.cache
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.AssemblyInfo.cs
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.dll
+/media/richard/My Passport/Code/EthImgStorageTool/EthDataCoreTest/EthDataCoreTest/obj/Debug/netcoreapp2.1/EthDataCoreTest.pdb

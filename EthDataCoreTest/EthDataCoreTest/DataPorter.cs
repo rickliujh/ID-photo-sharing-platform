@@ -62,12 +62,29 @@ namespace DataProcess
             return result.Result;
         }
 
-        public string ReadData(string Hx)
+        public string ReadData(string dataName)
+        {
+            var TxHashDS = DataMapOperator.GetTxHashForImageName(dataName);
+            string[] TxHash = TxHashDS.Trim().Split(' ');
+            string ImgString = null;
+            foreach (var item in TxHash)
+            {
+                ImgString += RedaDataFromPrivateChain(item);
+            }
+            return ImgString;
+        }
+
+        //public List<string> ReadData(string senderAddress)
+        //{
+
+        //}
+
+        public string RedaDataFromPrivateChain(string txHash)
         {
             //Connection privatechain RPC socket
             Web3Geth Web3 = new Web3Geth(url);
             //Get transactions massage
-            var result = Web3.Eth.Transactions.GetTransactionByHash.SendRequestAsync(Hx);
+            var result = Web3.Eth.Transactions.GetTransactionByHash.SendRequestAsync(txHash);
             //return Input
             return ConvertHexStringToString(result.Result.Input);
         }

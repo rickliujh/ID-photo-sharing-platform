@@ -87,10 +87,12 @@ namespace EthernumConnectionTest
             // //Console.WriteLine(result);
 
             ///test
-            var ImageUrl = @"/home/richard/图片/1346589-20180312232325883-126791296.jpg";
-            var ImaString = DataCoder.ImgToBase64String(ImageUrl);
             var dp = new DataPorter("http://localhost:8080/");
-            dp.WriteData("0xa26684a9283d1c1eabed4c9ffe9074bc03522760","123456",ImaString,"Test");
+            //var ImageUrl = @"C:\Users\CZH\Pictures\2b6c7439a6d1c80200fe7d3700d4ad00.jpg";
+            //var ImaString = DataCoder.ImgToBase64String(ImageUrl);
+            //dp.WriteData("0xd5e4076669b70db438855832d85b9c174680f46b", "123456",ImaString,"Test");
+            DataCoder.Base64StringToImage(dp.ReadData("Test"), @"C:\Users\CZH\Pictures\Tset.jpg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            
 
         }
 

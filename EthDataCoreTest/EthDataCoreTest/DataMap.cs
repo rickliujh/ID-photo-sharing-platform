@@ -52,25 +52,26 @@ namespace DataProcess
             }
         }
 
-        public static List<string> GetTxHashForAddress(string sendAddress)
-        {
-            try
-            {
-                var AddressData = dbContext.DataMaps.Where(t => t.AccountAddress == sendAddress);
-                List<string> Imagenames = new List<string>();
-                foreach (var item in AddressData)
-                {
-                    Imagenames.Add(item.ImageName);
-                }
-                return Imagenames;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-                return null;
-                //throw;
-            }
-        }
+        //public static List<string> GetTxHashForAddress(string sendAddress)
+        //{
+        //    try
+        //    {
+        //        var AddressData = dbContext.DataMaps.Where(t => t.AccountAddress == sendAddress).ToList();
+        //        //List<string> Imagenames = new List<string>();
+        //        //foreach (var item in AddressData)
+        //        //{
+        //        //    Imagenames.Add(item.ImageName);
+        //        //}
+        //        //return Imagenames;
+        //        return AddressData;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        Console.WriteLine(e.Message);
+        //        return null;
+        //        //throw;
+        //    }
+        //}
 
         public static string GetTxHashForImageName(string ImageName)
         {
@@ -81,8 +82,8 @@ namespace DataProcess
             }
             catch (Exception e)
             {
+                throw;
                 return e.Message;
-                //throw;
             }
         }
 

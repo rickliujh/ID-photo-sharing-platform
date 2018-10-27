@@ -73,7 +73,7 @@ namespace DataProcess
             }
         }
 
-        public static async Task<List<ImageDataMap>> GetTxHashAsync()
+        public static async Task<List<ImageDataMap>> GetAllTxHashAsync()
         {
             try
             {

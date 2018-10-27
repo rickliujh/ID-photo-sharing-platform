@@ -47,7 +47,7 @@ namespace DataProcess
 
         }
 
-        public async Task<string> WriteDataToPrvataChainAsync(string senderAddress, string Password, string Data)
+        private async Task<string> WriteDataToPrvataChainAsync(string senderAddress, string Password, string Data)
         {
             ///Connection privatechain RPC socket
             Web3Geth Web3 = new Web3Geth(url);
@@ -80,7 +80,7 @@ namespace DataProcess
 
         //}
 
-        public async Task<string> RedaDataFromPrivateChainAsync(string txHash)
+        private async Task<string> RedaDataFromPrivateChainAsync(string txHash)
         {
             //Connection privatechain RPC socket
             Web3Geth Web3 = new Web3Geth(url);
@@ -104,7 +104,7 @@ namespace DataProcess
             return result.Value;
         }
 
-        public string bSubstring(ref string s, int length)
+        private string bSubstring(ref string s, int length)
         {
             //https://www.cnblogs.com/nokiaguy/archive/2008/09/06/1285794.html
 
@@ -151,7 +151,7 @@ namespace DataProcess
             return System.Text.Encoding.Unicode.GetString(bytes, 0, i);
         }
 
-        public List<string> GetStringList(string data)
+        private List<string> GetStringList(string data)
         {
             var strArray = new List<string>();
             string tmp = data;

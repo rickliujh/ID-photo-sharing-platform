@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Accounts
 {
@@ -15,12 +16,11 @@ namespace Accounts
             url = Url;
         }
 
-        public string NewAccount(string Password)
+        public async Task<string> NewAccountAsync(string Password)
         {
             Web3Geth Web3 = new Web3Geth(url);
-            var task = Web3.Personal.NewAccount.SendRequestAsync(Password);
-            var accountAddress = task.Result;
-            return accountAddress;
+            var result = await Web3.Personal.NewAccount.SendRequestAsync(Password);
+            return result;
         }
     }
 }

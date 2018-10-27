@@ -30,19 +30,19 @@ namespace DataProcess
     {
         private static ImageDataMapContext dbContext = new ImageDataMapContext();
 
-        public static bool AddImageToMap(string Name, string Address, string TxHash)
+        public static async Task<bool> AddImageToMapAsync(string Name, string Address, string TxHash)
         {
             var dbContext = new ImageDataMapContext();
             try
             {
-                dbContext.DataMaps.Add(new ImageDataMap
+                await dbContext.DataMaps.AddAsync(new ImageDataMap
                 {
                     AccountAddress = Address,
                     ImageName = Name,
                     TransactionHash = TxHash,
                     PublishTime = DateTime.Now
                 });
-                dbContext.SaveChanges();
+                await dbContext.SaveChangesAsync();
                 return true;
             }
             catch (Exception e)
@@ -52,32 +52,53 @@ namespace DataProcess
             }
         }
 
-        //public static List<string> GetTxHashForAddress(string sendAddress)
-        //{
-        //    try
-        //    {
-        //        var AddressData = dbContext.DataMaps.Where(t => t.AccountAddress == sendAddress).ToList();
-        //        //List<string> Imagenames = new List<string>();
-        //        //foreach (var item in AddressData)
-        //        //{
-        //        //    Imagenames.Add(item.ImageName);
-        //        //}
-        //        //return Imagenames;
-        //        return AddressData;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //        return null;
-        //        //throw;
-        //    }
-        //}
-
-        public static string GetTxHashForImageName(string ImageName)
+        public static async Task<List<ImageDataMap>> GetTxHashForAddressAsync(string sendAddress)
         {
             try
             {
-                var imageDataMap = dbContext.DataMaps.SingleOrDefault(t => t.ImageName == ImageName);
+                var AddressData = await dbContext.DataMaps.Where(t => t.AccountAddress == sendAddress).ToListAsync();
+                //List<string> Imagenames = new List<string>();
+                //foreach (var item in AddressData)
+                //{
+                //    Imagenames.Add(item.ImageName);
+                //}
+                //return Imagenames;
+                return AddressData;
+            }
+            catch (Exception e)
+            {
+                throw;
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        public static async Task<List<ImageDataMap>> GetTxHashAsync()
+        {
+            try
+            {
+                var AddressData = await dbContext.DataMaps.ToListAsync();
+                //List<string> Imagenames = new List<string>();
+                //foreach (var item in AddressData)
+                //{
+                //    Imagenames.Add(item.ImageName);
+                //}
+                //return Imagenames;
+                return AddressData;
+            }
+            catch (Exception e)
+            {
+                throw;
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        public static async Task<string> GetTxHashForImageNameAsync(string ImageName)
+        {
+            try
+            {
+                var imageDataMap = await dbContext.DataMaps.SingleOrDefaultAsync(t => t.ImageName == ImageName);
                 return imageDataMap.TransactionHash;
             }
             catch (Exception e)
@@ -87,30 +108,31 @@ namespace DataProcess
             }
         }
 
-        public static bool ChangeImageName(string CurrentImageName, string ChangeImageName)
+        public static async Task<bool> ChangeImageNameAsync(string CurrentImageName, string ChangeImageName)
         {
             try
             {
-                var AddressData = dbContext.DataMaps.SingleOrDefault(t => t.ImageName == CurrentImageName);
+                var AddressData = await dbContext.DataMaps.SingleOrDefaultAsync(t => t.ImageName == CurrentImageName);
                 AddressData.ImageName = ChangeImageName;
-                dbContext.SaveChanges();
+                await dbContext.SaveChangesAsync();
                 return true;
             }
             catch (Exception e)
             {
+                throw;
                 Console.WriteLine(e.Message);
                 return false;
-                //throw;
             }
         }
 
-        public static bool RemoveImage(string ImageName)
+        public static async Task<bool> RemoveImageAsync(string ImageName)
         {
+            throw new NotImplementedException();
             try
             {
-                var AddressData = dbContext.DataMaps.SingleOrDefault(t => t.ImageName == ImageName);
+                var AddressData = await dbContext.DataMaps.SingleOrDefaultAsync(t => t.ImageName == ImageName);
                 dbContext.DataMaps.Remove(AddressData);
-                dbContext.SaveChanges();
+                await dbContext.SaveChangesAsync();
                 return true;
             }
             catch (Exception e)

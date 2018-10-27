@@ -4,6 +4,7 @@ using Nethereum.RPC.Eth.DTOs;
 using System;
 using System.Numerics;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DataProcess
 {
@@ -17,24 +18,24 @@ namespace DataProcess
             url = Url;
         }
 
-        public bool WriteData(string senderAddress, string Password, string Data, string DataName)
+        public async Task<bool> WriteDataAsync(string senderAddress, string Password, string Data, string DataName)
         {
             string TxHash = null;
             try
             {
                 if (Data.Length / 2 <= 31744)
                 {
-                    TxHash = WriteDataToPrvataChain(senderAddress, Password, Data);
-                    DataMapOperator.AddImageToMap(DataName, senderAddress, TxHash);
+                    TxHash = await WriteDataToPrvataChainAsync(senderAddress, Password, Data);
+                    await DataMapOperator.AddImageToMapAsync(DataName, senderAddress, TxHash);
                 }
                 else
                 {
                     var dataList = GetStringList(Data);
                     foreach (var item in dataList)
                     {
-                        TxHash += (WriteDataToPrvataChain(senderAddress, Password, item) + " ");
+                        TxHash += (await WriteDataToPrvataChainAsync(senderAddress, Password, item) + " ");
                     }
-                    DataMapOperator.AddImageToMap(DataName, senderAddress, TxHash);
+                    await DataMapOperator.AddImageToMapAsync(DataName, senderAddress, TxHash);
                 }
                 return true;
             }
@@ -46,7 +47,7 @@ namespace DataProcess
 
         }
 
-        public string WriteDataToPrvataChain(string senderAddress, string Password, string Data)
+        public async Task<string> WriteDataToPrvataChainAsync(string senderAddress, string Password, string Data)
         {
             ///Connection privatechain RPC socket
             Web3Geth Web3 = new Web3Geth(url);
@@ -56,20 +57,20 @@ namespace DataProcess
 
             ///Unlock account
             ulong? ul = null;
-            var t = Web3.Personal.UnlockAccount.SendRequestAsync(senderAddress, Password, ul);
+            var t = await Web3.Personal.UnlockAccount.SendRequestAsync(senderAddress, Password, ul);
 
-            var result = Web3.Eth.Transactions.SendTransaction.SendRequestAsync(x);
-            return result.Result;
+            var result = await Web3.Eth.Transactions.SendTransaction.SendRequestAsync(x);
+            return result;
         }
 
-        public string ReadData(string dataName)
+        public async Task<string> ReadDataAsync(string dataName)
         {
-            var TxHashDS = DataMapOperator.GetTxHashForImageName(dataName);
+            var TxHashDS = await DataMapOperator.GetTxHashForImageNameAsync(dataName);
             string[] TxHash = TxHashDS.Trim().Split(' ');
             string ImgString = null;
             foreach (var item in TxHash)
             {
-                ImgString += RedaDataFromPrivateChain(item);
+                ImgString += await RedaDataFromPrivateChainAsync(item);
             }
             return ImgString;
         }
@@ -79,14 +80,14 @@ namespace DataProcess
 
         //}
 
-        public string RedaDataFromPrivateChain(string txHash)
+        public async Task<string> RedaDataFromPrivateChainAsync(string txHash)
         {
             //Connection privatechain RPC socket
             Web3Geth Web3 = new Web3Geth(url);
             //Get transactions massage
-            var result = Web3.Eth.Transactions.GetTransactionByHash.SendRequestAsync(txHash);
+            var result = await Web3.Eth.Transactions.GetTransactionByHash.SendRequestAsync(txHash);
             //return Input
-            return ConvertHexStringToString(result.Result.Input);
+            return ConvertHexStringToString(result.Input);
         }
 
 
@@ -96,11 +97,11 @@ namespace DataProcess
             return new Nethereum.Hex.HexConvertors.HexUTF8StringConvertor().ConvertFromHex(Str);
         }
 
-        public BigInteger GetTransactionCount(string senderAddress)
+        public async Task<BigInteger> GetTransactionCountAsync(string senderAddress)
         {
             Web3Geth Web3 = new Web3Geth(url);
-            var result = Web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(senderAddress);
-            return result.Result.Value;
+            var result = await Web3.Eth.Transactions.GetTransactionCount.SendRequestAsync(senderAddress);
+            return result.Value;
         }
 
         public string bSubstring(ref string s, int length)

@@ -1,0 +1,9 @@
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\bin\Release\netcoreapp2.1\DataProcessingCenter.deps.json
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\bin\Release\netcoreapp2.1\DataProcessingCenter.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\bin\Release\netcoreapp2.1\DataProcessingCenter.pdb
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\obj\Release\netcoreapp2.1\DataProcessingCenter.csprojAssemblyReference.cache
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\obj\Release\netcoreapp2.1\DataProcessingCenter.csproj.CoreCompileInputs.cache
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\obj\Release\netcoreapp2.1\DataProcessingCenter.AssemblyInfoInputs.cache
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\obj\Release\netcoreapp2.1\DataProcessingCenter.AssemblyInfo.cs
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\obj\Release\netcoreapp2.1\DataProcessingCenter.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter\obj\Release\netcoreapp2.1\DataProcessingCenter.pdb

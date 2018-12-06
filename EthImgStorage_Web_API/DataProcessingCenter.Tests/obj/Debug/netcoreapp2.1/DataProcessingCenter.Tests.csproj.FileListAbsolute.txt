@@ -1,0 +1,17 @@
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.Tests.deps.json
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.Tests.runtimeconfig.json
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.Tests.runtimeconfig.dev.json
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.Tests.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.Tests.pdb
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\bin\Debug\netcoreapp2.1\DataProcessingCenter.pdb
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.csprojAssemblyReference.cache
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.csproj.CoreCompileInputs.cache
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.AssemblyInfoInputs.cache
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.AssemblyInfo.cs
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.csproj.CopyComplete
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.dll
+D:\Code\EthImgStorage_Web_API\DataProcessingCenter.Tests\obj\Debug\netcoreapp2.1\DataProcessingCenter.Tests.pdb

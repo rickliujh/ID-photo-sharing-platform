@@ -8,7 +8,7 @@ using System.Collections.Generic;
 namespace IdPhotoSharingPlatform_Client.Views.Account
 {
     /// <summary>
-    /// Window1.xaml 的交互逻辑
+    /// Login.xaml 的交互逻辑
     /// </summary>
     public partial class Login : Window
     {

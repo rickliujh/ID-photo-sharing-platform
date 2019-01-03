@@ -3,6 +3,7 @@ using System;
 using System.Threading.Tasks;
 using System.Windows;
 using IdPhotoSharingPlatform_Client.Http;
+using System.Collections.Generic;
 
 namespace IdPhotoSharingPlatform_Client.Views.Account
 {
@@ -24,28 +25,34 @@ namespace IdPhotoSharingPlatform_Client.Views.Account
 
         public async Task<bool> DoLogin()
         {
-            string json = $"{{\"Account\":\"{ Account.Address}\",\"Password\":\"{ Account.Password}\"}}";
-            var result = await Task.Run<string>(() => {
-                var res = HttpPost.PostUrl(url, json);
-                return res;
-            });
-            if (result == "false") return false;
-            return true;
+            var data = new Dictionary<string, string>();
+            data["Account"] = Account.Address;
+            data["Password"] = Account.Password;
+            var result = await HttpPost.DoPostAsync(data, url);
+            if (result == "true") return true;
+            return false;
         }
 
         private async void Login_Click(object sender, RoutedEventArgs e)
         {
-            Account.Address = this.address.Text;
-            Account.Password = this.password.Text;
-            var isSuccessful = await DoLogin();
-            if (!isSuccessful)
+            try
             {
-                MessageBox.Show("登录失败！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                Account.Address = this.address.Text;
+                Account.Password = this.password.Text;
+                var isSuccessful = await DoLogin();
+                if (!isSuccessful)
+                {
+                    MessageBox.Show("登录失败！", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    LoginSuccessed.Invoke(this, null);
+                    this.Close();
+                }
             }
-            else
+            catch (Exception)
             {
-                LoginSuccessed.Invoke(this, null);
-                this.Close();
+                MessageBox.Show("网络超时!", "错误", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

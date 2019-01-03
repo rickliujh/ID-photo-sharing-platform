@@ -32,7 +32,6 @@ namespace IdPhotoSharingPlatform_Client
         {
             InitializeComponent();
             IsLogin = false;
-
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
@@ -47,6 +46,14 @@ namespace IdPhotoSharingPlatform_Client
         {
             IsLogin = true;
             loginInfo.Text = $"已登录 | 账户：{AccountInfo.Address}";
+            login.IsEnabled = false;
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            IsLogin = false;
+            loginInfo.Text = "未登录";
+            login.IsEnabled = true;
         }
     }
 }

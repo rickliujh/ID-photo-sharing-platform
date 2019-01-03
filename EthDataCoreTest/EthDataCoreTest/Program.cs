@@ -34,7 +34,7 @@ namespace EthernumConnectionTest
             var str = "HelloWorld!";
             var address = "0xd5e4076669b70db438855832d85b9c174680f46b";
             var accPassword = "123456";
-            var dataName = "Test1-1";
+            var dataName = "Test1-1.1";
 
             var dataPorter = new DataPorter(url);
             await dataPorter.WriteDataAsync(address, accPassword, str, dataName);
@@ -47,25 +47,25 @@ namespace EthernumConnectionTest
             #endregion
 
 
-            #region 写入图片
-            var imgAddress = @"D:\Test.jpg";
-            var imgDataName = "Test1-2";
-            var imgSting = DataCoder.ImgToBase64String(imgAddress);
-            await dataPorter.WriteDataAsync(address, accPassword, imgSting, imgDataName);
-            #endregion
+            //#region 写入图片
+            //var imgAddress = @"D:\Test.jpg";
+            //var imgDataName = "Test1-2";
+            //var imgSting = DataCoder.ImgToBase64String(imgAddress);
+            //await dataPorter.WriteDataAsync(address, accPassword, imgSting, imgDataName);
+            //#endregion
 
 
-            #region 读取图片
-            ///<summary>
-            ///<param name="ImageFormat.Jpeg"></param>
-            ///<param name="ImageFormat.Bmp"></param>
-            ///<param name="ImageFormat.Gif"></param>
-            ///<param name="ImageFormat.Png"></param>
-            /// </summary>
-            var imgBase64String = await dataPorter.ReadDataAsync(imgDataName);
-            var imgSaveAddress = @"D:\result.jpg";
-            var result = DataCoder.Base64StringToImage(imgBase64String, imgSaveAddress, System.Drawing.Imaging.ImageFormat.Jpeg);
-            #endregion
+            //#region 读取图片
+            /////<summary>
+            /////<param name="ImageFormat.Jpeg"></param>
+            /////<param name="ImageFormat.Bmp"></param>
+            /////<param name="ImageFormat.Gif"></param>
+            /////<param name="ImageFormat.Png"></param>
+            ///// </summary>
+            //var imgBase64String = await dataPorter.ReadDataAsync(imgDataName);
+            //var imgSaveAddress = @"D:\result.jpg";
+            //var result = DataCoder.Base64StringToImage(imgBase64String, imgSaveAddress, System.Drawing.Imaging.ImageFormat.Jpeg);
+            //#endregion
 
 
 

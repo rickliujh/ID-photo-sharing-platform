@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IdPhotoSharingPlatform_Client"
         mc:Ignorable="d"
-        Title="证件照管理系统" Height="450.993" Width="800">
-    <Grid>
+        Title="证件照管理系统" Height="458" Width="800">
+    <Grid Margin="0,0,0,0">
         <ListView HorizontalAlignment="Left" Height="328" Margin="10,67,0,0" VerticalAlignment="Top" Width="267">
             <ListView.View>
                 <GridView>
@@ -40,12 +40,12 @@
         <Label Content="ID Card:" HorizontalAlignment="Left" Margin="394,67,0,0" VerticalAlignment="Top"/>
         <Label x:Name="idCard" Content="暂无" HorizontalAlignment="Left" Margin="475,67,0,0" VerticalAlignment="Top" Width="215"/>
         <StatusBar x:Name="starusBar" HorizontalAlignment="Left" Height="19" Margin="0,400,0,0" VerticalAlignment="Top" Width="792">
-            <StatusBarItem>
+            <StatusBarItem Height="24" VerticalAlignment="Top" Margin="0,-3,0,-1.8">
                 <TextBlock x:Name="loginInfo" Text="未登录"/>
             </StatusBarItem>
         </StatusBar>
         <Button x:Name="login" Content="登录" HorizontalAlignment="Left" Margin="703,10,0,0" VerticalAlignment="Top" Width="37" Click="Login_Click"/>
-        <Button x:Name="logout" Content="退出" HorizontalAlignment="Left" Margin="745,10,0,0" VerticalAlignment="Top" Width="37"/>
+        <Button x:Name="logout" Content="退出" HorizontalAlignment="Left" Margin="745,10,0,0" VerticalAlignment="Top" Width="37" Click="Logout_Click"/>
         <Button x:Name="upload" Content="提交" HorizontalAlignment="Left" Margin="643,10,0,0" VerticalAlignment="Top" Width="55"/>
     </Grid>
 </Window>

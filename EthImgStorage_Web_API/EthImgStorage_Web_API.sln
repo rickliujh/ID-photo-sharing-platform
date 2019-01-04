@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataProcessingCenter.Tests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdPhotoSharingPlatform_Client.SDK", "IdPhotoSharingPlatform_Client.SDK\IdPhotoSharingPlatform_Client.SDK.csproj", "{7C3762C9-284E-442C-9A59-870B88D79F6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Public_Interface", "Public_Interface\Public_Interface.csproj", "{1C6DE0DC-3F6A-42B4-9473-AF96B09AF5D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chain_Access", "Chain_Access\Chain_Access.csproj", "{580477D5-1108-49D1-B8B2-404A59525CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chain_Access.tests", "Chain_Access.tests\Chain_Access.tests.csproj", "{0D17C1C8-CCA2-40E7-9D1F-C7BF362BC2E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +39,18 @@ Global
 		{7C3762C9-284E-442C-9A59-870B88D79F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C3762C9-284E-442C-9A59-870B88D79F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C3762C9-284E-442C-9A59-870B88D79F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C6DE0DC-3F6A-42B4-9473-AF96B09AF5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6DE0DC-3F6A-42B4-9473-AF96B09AF5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6DE0DC-3F6A-42B4-9473-AF96B09AF5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6DE0DC-3F6A-42B4-9473-AF96B09AF5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580477D5-1108-49D1-B8B2-404A59525CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580477D5-1108-49D1-B8B2-404A59525CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580477D5-1108-49D1-B8B2-404A59525CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580477D5-1108-49D1-B8B2-404A59525CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D17C1C8-CCA2-40E7-9D1F-C7BF362BC2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D17C1C8-CCA2-40E7-9D1F-C7BF362BC2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D17C1C8-CCA2-40E7-9D1F-C7BF362BC2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D17C1C8-CCA2-40E7-9D1F-C7BF362BC2E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

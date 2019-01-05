@@ -6,20 +6,20 @@ namespace ChainAccess.Ethereum
     public class EthereumBase
     {
         public string ConnectionUrl { get; set; }
-        protected Web3Geth Web3 { get; set; }
+        public Web3Geth Web3 { get; set; }
 
         public EthereumBase()
         {
-            if (ConnectionUrl == null)
-            {
-                throw new Exception("Need to specify a connection string!");
-            }
+            ConnectionUrl = "http://localhost:8080/";
             Web3 = new Web3Geth(ConnectionUrl);
         }
 
-        public EthereumBase(string connectionUrl)
+        public void initialization(string connectionUrl)
         {
             ConnectionUrl = connectionUrl;
+            if (ConnectionUrl == null)
+                throw new Exception("Need to specify a connection string!");
+
             Web3 = new Web3Geth(ConnectionUrl);
         }
     }

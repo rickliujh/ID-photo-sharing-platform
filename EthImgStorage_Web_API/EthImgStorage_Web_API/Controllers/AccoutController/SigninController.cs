@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using EthImgStorage_Web_API.Models;
-using System.Text;
 using ChainAccess.Ethereum;
+using EthImgStorage_Web_API.Models.AccountModels;
 
 namespace EthImgStorage_Web_API.Controllers.AccoutController
 {
@@ -14,16 +9,12 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
     [ApiController]
     public class SigninController : ControllerBase
     {
-        string url = "http://localhost:8080/";
-
-        // POST: api/Login
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] UserAccount user)
+        public async Task<IActionResult> Post([FromBody] SignIn user)
         {
             var account = new Account();
-            account.ConnectionUrl = url;
             var isSuccess = await account.UnlockAccountAsync(user.Account, user.Password);
-            return new JsonResult(isSuccess);
+            return new JsonResult(new { isSuccess });
         }
     }
 }

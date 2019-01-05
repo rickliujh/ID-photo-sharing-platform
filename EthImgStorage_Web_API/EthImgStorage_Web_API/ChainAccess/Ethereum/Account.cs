@@ -5,11 +5,6 @@ namespace ChainAccess.Ethereum
 {
     public class Account : EthereumBase
     {
-        public Account()
-        {
-            
-        }
-
         /// <summary>
         /// 创建账户
         /// </summary>

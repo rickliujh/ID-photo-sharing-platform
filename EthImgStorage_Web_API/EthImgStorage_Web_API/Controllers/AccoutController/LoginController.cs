@@ -16,8 +16,8 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
             var isSuccess = await account.UnlockAccountAsync(data.AdminAccount, data.AdminPassword);
             if (!isSuccess)
             {
-                string error_msg = "Account or Password wrong!";
-                return new JsonResult(error_msg);
+                string error = "Account or Password wrong!";
+                return new JsonResult(new { error });
             }
             var address = await account.CreateAccountAsync(data.NewAccountPassword);
             return new JsonResult(new { address });

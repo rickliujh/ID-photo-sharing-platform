@@ -11,6 +11,7 @@ namespace ChainAccess.Ethereum.DateAccess
 
         public DataSave()
         {
+            Account = new Account();
         }
 
         public async Task<string> SaveDataToChain(string data, string address, string password)
@@ -21,7 +22,11 @@ namespace ChainAccess.Ethereum.DateAccess
                 throw new Exception("The data can't be larger than 32KB!");
             }
             var input = new TransactionInput(haxdata, new HexBigInteger("0xffffff"), address);
-            await Account.UnlockAccountAsync(address, password);
+            var isSuccessful = await Account.UnlockAccountAsync(address, password);
+            if (!isSuccessful)
+            {
+                throw new Exception("Account or Password wrong!");
+            }
             var resultHash = await Web3.Eth.Transactions
                 .SendTransaction
                 .SendRequestAsync(input);

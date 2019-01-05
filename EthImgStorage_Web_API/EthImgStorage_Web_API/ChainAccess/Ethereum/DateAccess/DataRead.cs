@@ -6,7 +6,6 @@ namespace ChainAccess.Ethereum.DateAccess
     {
         public DataRead()
         {
-            
         }
 
         public async Task<string> GetDataFromChain(string transationId)

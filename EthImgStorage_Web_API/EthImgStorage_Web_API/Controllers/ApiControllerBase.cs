@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EthImgStorage_Web_API.GeneralExtension;
 using EthImgStorage_Web_API.Models;
+using EthImgStorage_Web_API.Models.DataBase;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,10 +15,12 @@ namespace EthImgStorage_Web_API.Controllers
     public class ApiControllerBase : ControllerBase
     {
         public Message Message { get; set; }
+        public PlatformDbContext DbContext { get; set; }
 
         public ApiControllerBase()
         {
             Message = new Message();
+            DbContext = new PlatformDbContext();
         }
 
         /// <summary>

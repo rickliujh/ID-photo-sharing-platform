@@ -2,7 +2,7 @@
 {
     public class SignIn
     {
-        public string Account { get; set; }
+        public long Mobile { get; set; }
         public string Password { get; set; }
     }
 }

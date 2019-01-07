@@ -16,38 +16,36 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
         public async Task<IActionResult> Post([FromBody] Login data)
         {
             var account = new Account();
-            var dbContext = new PlatformDbContext();
-            Message.Code = 0;
-            Message.Msg = "success！";
 
             //TODO:判断管理员账户是否可用
-            //var user = dbContext.Users.SingleOrDefault(a =>  a.Mobile == data.AdminAccountMobile);
-            //if(user == null)
-            //{
-            //    Message.Error = "Did not find this account!";
-            //    Message.Code = 1;
-            //    return new JsonResult(Message);
-            //}
-            //if (user.Password != MD5Encrypt16(data.AdminPassword))
-            //{
-            //    Message.Error = "Account password is incorrect!";
-            //    Message.Code = 1;
-            //    return new JsonResult(Message);
-            //}
-            //var isSuccess = await account.UnlockAccountAsync(user.EthereumAddress, data.AdminPassword);
-            //if (!isSuccess)
-            //{
-            //    Message.Error = "Account or Password wrong!";
-            //    Message.Code = 1;
-            //    return new JsonResult(Message);
-            //}
+            var user = DbContext.Users.SingleOrDefault(a => a.Mobile == data.AdminAccountMobile);
+            if (user == null)
+            {
+                Message.Error = "Did not find this account!";
+                Message.Code = 1;
+                return new JsonResult(Message);
+            }
+            if (user.Password != MD5Encrypt16(data.AdminPassword))
+            {
+                Message.Error = "Account password is incorrect!";
+                Message.Code = 1;
+                return new JsonResult(Message);
+            }
+
+            //TODO:判断该手机号是否存在
+            var isExist = DbContext.Users.SingleOrDefault(a => a.Mobile == data.NewAccountMobile);
+            if (isExist != null)
+            {
+                Message.Error = "Account already exists!";
+                Message.Code = 1;
+                return new JsonResult(Message);
+            }
 
             //TODO:向以太坊客户端申请地址
-            //var newAddress = await account.CreateAccountAsync(data.NewAccountPassword);
-            var newAddress = "0xd5e4076669b70db438855832d85b9c174680f46b";
+            var newAddress = await account.CreateAccountAsync(data.NewAccountPassword);
 
             //TODO:将所有信息写入数据库
-            await dbContext.Users.AddAsync(new User
+            await DbContext.Users.AddAsync(new User
             {
                 Mobile = data.NewAccountMobile,
                 Name = data.NewAccountName,
@@ -57,7 +55,7 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
                 Character = Character.User
             });
 
-            var result = await dbContext.SaveChangesAsync();
+            var result = await DbContext.SaveChangesAsync();
 
             //if (result == null)
             //{
@@ -65,6 +63,8 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
             //    Message.Code = 1;   
             //}
 
+            Message.Code = 0;
+            Message.Msg = "success！";
             return new JsonResult(Message);
         }
     }

@@ -3,14 +3,16 @@ using System;
 using EthImgStorage_Web_API.Models.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EthImgStorage_Web_API.Migrations
 {
     [DbContext(typeof(PlatformDbContext))]
-    partial class PlatformDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190107051159_addUserColumns")]
+    partial class addUserColumns
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,7 @@ namespace EthImgStorage_Web_API.Migrations
 
                     b.Property<DateTime>("LoginTime");
 
-                    b.Property<long>("Mobile");
+                    b.Property<int>("Mobile");
 
                     b.Property<string>("Name");
 

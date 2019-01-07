@@ -5,6 +5,7 @@ namespace EthImgStorage_Web_API.Models.DataBase
     public class User
     {
         public int ID { get; set; }
+        public long Mobile { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
         public string EthereumAddress { get; set; }

@@ -7,7 +7,7 @@ namespace EthImgStorage_Web_API.Controllers.DataController
 {
     [Route("api/data/[controller]")]
     [ApiController]
-    public class DownloadController : ControllerBase
+    public class DownloadController : ApiControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]string transationId)

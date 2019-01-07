@@ -7,7 +7,7 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
 {
     [Route("api/account/[controller]")]
     [ApiController]
-    public class SigninController : ControllerBase
+    public class SigninController : ApiControllerBase
     {
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] SignIn user)

@@ -65,7 +65,7 @@ namespace EthImgStorage_Web_API.Controllers.AccoutController
 
             Message.Code = 0;
             Message.Msg = "success！";
-            return new JsonResult(Message);
+            return new JsonResult(new { Message = Message });
         }
     }
 }

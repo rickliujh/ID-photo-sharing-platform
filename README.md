@@ -1,11 +1,7 @@
 # ID photo sharing platform
 A blockchain document sharing platform based on the Ethereum private chain
 
-<br/>
-
 ###### I will store the latest code in the Dev branch：https://github.com/R1chMillions/EthImgStorageTool/tree/dev
-
-<br/>
 
 ### The project is built on C# and is divided into three modules.
 

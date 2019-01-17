@@ -19,9 +19,9 @@ namespace EthImgStorage_Web_API.Controllers.DataController
             ChainModel = new ChainModel();
         }
 
-        [HttpPost]
-        public async Task<bool> AddPersonPost()
-        {
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> AddPersonPost()
+        //{
+        //}
     }
 }
